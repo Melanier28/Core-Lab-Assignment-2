@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>My Music Listening Habits</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- chart js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="logo">MUSIC DATA</div>
+
+    <div class="nav-links">
+      <a href="#artists">Artists</a>
+      <a href="#time">Listening Time</a>
+      <a href="#genres">Genres</a>
+    </div>
+  </nav>
+
+
+  <!-- hero -->
+  <header class="hero">
+
+    <p class="small-title">A LOOK INTO MY EVERYDAY SOUNDTRACK</p>
+
+    <h1>
+      MY MUSIC<br>
+      LISTENING <span>HABITS</span>
+    </h1>
+
+    <p class="hero-description">
+      A visualization of who I listen to, when I listen,
+      and the genres that make up my everyday music.
+    </p>
+
+    <div class="hero-stats">
+
+      <div>
+        <h2>15</h2>
+        <p>ARTISTS</p>
+      </div>
+
+      <div>
+        <h2>7,300</h2>
+        <p>EST. MINUTES / MONTH</p>
+      </div>
+
+      <div>
+        <h2>45%</h2>
+        <p>EDM</p>
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <main>
+
+    <!-- artist chart -->
+    <section class="chart-section" id="artists">
+
+      <div class="section-heading">
+        <p class="number">01</p>
+
+        <div>
+          <h2>WHO I LISTEN TO</h2>
+          <p>
+            My estimated top artists based on my everyday
+            listening habits.
+          </p>
+        </div>
+      </div>
+
+      <div class="chart-card artist-card">
+        <h3>TOP 15 ARTISTS</h3>
+        <p class="chart-subtitle">Estimated minutes per month</p>
+
+        <div class="artist-chart-container">
+          <canvas id="artistChart"></canvas>
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- time of day chart -->
+    <section class="chart-section" id="time">
+
+      <div class="section-heading">
+        <p class="number">02</p>
+
+        <div>
+          <h2>WHEN I LISTEN</h2>
+          <p>
+            Most of my listening happens while commuting,
+            attending class, or spending time outside.
+          </p>
+        </div>
+      </div>
+
+
+      <div class="time-layout">
+
+        <div class="chart-card doughnut-card">
+
+          <h3>TIME OF DAY</h3>
+          <p class="chart-subtitle">Percentage of daily listening</p>
+
+          <div class="doughnut-container">
+            <canvas id="timeChart"></canvas>
+
+            <div class="center-text">
+              <span>Most</span>
+              <strong>AFTERNOON</strong>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="listening-info">
+
+          <div class="time-item">
+            <span class="time-number">50%</span>
+            <div>
+              <h3>AFTERNOON</h3>
+              <p>Classes, breaks, campus, and commuting home.</p>
+            </div>
+          </div>
+
+          <div class="time-item">
+            <span class="time-number">30%</span>
+            <div>
+              <h3>MORNING</h3>
+              <p>My commute to school.</p>
+            </div>
+          </div>
+
+          <div class="time-item">
+            <span class="time-number">15%</span>
+            <div>
+              <h3>EVENING</h3>
+              <p>Usually when I have a late day.</p>
+            </div>
+          </div>
+
+          <div class="time-item">
+            <span class="time-number">5%</span>
+            <div>
+              <h3>NIGHT</h3>
+              <p>I rarely listen once I'm home.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- genre chart -->
+    <section class="chart-section" id="genres">
+
+      <div class="section-heading">
+        <p class="number">03</p>
+
+        <div>
+          <h2>WHAT I LISTEN TO</h2>
+          <p>
+            EDM makes up almost half of my estimated listening,
+            followed by pop, R&B, hip-hop, and Latin music.
+          </p>
+        </div>
+      </div>
+
+
+      <div class="chart-card genre-card">
+
+        <h3>MY GENRE MIX</h3>
+        <p class="chart-subtitle">
+          Bigger bubbles represent more listening.
+        </p>
+
+        <div class="bubble-container">
+          <canvas id="genreChart"></canvas>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- about -->
+    <section class="about">
+
+      <p class="small-title">ABOUT THE DATA</p>
+
+      <h2>
+        MUSIC FOLLOWS ME<br>
+        THROUGHOUT <span>MY DAY.</span>
+      </h2>
+
+      <p>
+        I listen to music mostly when I'm outside of my home.
+        My commute, classes, breaks, and time spent around the city
+        make up most of my listening time. EDM appears the most in
+        my everyday listening, with John Summit being my most-played artist.
+      </p>
+
+      <p>
+        The values shown in this project are estimates based on my
+        typical listening habits rather than exact streaming history.
+      </p>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+    <p>MY MUSIC LISTENING HABITS</p>
+    <p>DATA VISUALIZATION — 2026</p>
+  </footer>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
